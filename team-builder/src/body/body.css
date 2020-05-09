@@ -1,0 +1,20 @@
+.body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60%;
+    background-color: rgb(122, 111, 111);
+    /*border-top-style: dotted;*/
+    border: solid red;
+    padding: 1%;
+    
+}

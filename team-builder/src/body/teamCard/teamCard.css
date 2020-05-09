@@ -1,0 +1,10 @@
+.teamCard {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 250px;
+    border: solid blue;
+    padding: 1%;
+    margin: 1%;
+}
