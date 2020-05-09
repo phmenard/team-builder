@@ -95,8 +95,10 @@ const AddMemberForm = (props) => {
                         onChange={handleChange}
                     />
                     <button type="submit">Save!</button>
-                    {saved.status ? <p>Member {saved.name} has been saved.</p> : ''}
-                    </form></div>
+                    
+                    </form>
+                    {saved.status ? <p className="saved">{saved.name} has been saved.</p> : ''}
+                    </div>
             </div>
         );
     }

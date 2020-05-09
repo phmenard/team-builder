@@ -9,7 +9,9 @@ const Footer = props => {
     return (
 
         <div className="footerContainer" >
-            <div className="footer"><h3>My Lambda Team</h3>
+            <div className="footer">
+                
+                <a href="https://lambdaschool.com/"><h3>Lambda School</h3></a> 
                 {/*<div className="home-button" onClick={() => history.push("/")}>Home</div>*/}
                 <Link to="/">
                     <div className="header-button">Home</div>

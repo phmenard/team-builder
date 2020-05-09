@@ -3,9 +3,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 60%;
-    background-color: rgb(122, 111, 111);
-    /*border-top-style: dotted;*/
-    border: solid red;
+    
+    border-top-style: solid;
+    
     padding: 1%;
     
 }

@@ -15,7 +15,7 @@ export const team = [
         location: 'Somewhere',
         quote: 'Stay strong',
     }
-    ,
+    
     
 
 ];
