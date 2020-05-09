@@ -20,5 +20,8 @@ export const team = [
 
 ];
 
+export const addTeamMember = function(member) {
+    team.unshift(member);
+}
 
 export default team;

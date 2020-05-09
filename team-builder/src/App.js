@@ -8,9 +8,10 @@ import AddMemberForm from './forms/AddMember';
 import TeamContainer from './body/teamContainer/TeamContainer';
 
 import Team from './data/team';
+import {addTeamMember} from './data/team';
 
 function App() {
-  const [team, setTeam] = useState(Team);
+  const [team, setTeam] = useState(Team.reverse());
 
   const handleSubmit = (member) => {
     setTeam([...team, member]);

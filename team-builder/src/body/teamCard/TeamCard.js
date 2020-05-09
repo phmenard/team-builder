@@ -13,7 +13,8 @@ const Body = props => {
              <label htmlFor="name">{props.member.name}</label>
              <p>{props.member.location}</p>
              <label htmlFor="role">{props.member.role}</label>
-             <p>{props.member.quote}</p>    
+             <p>{props.member.quote}</p>  
+             <p>Edit</p>   
        </div>
     
   );
