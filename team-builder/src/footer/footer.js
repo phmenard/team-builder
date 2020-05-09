@@ -12,7 +12,7 @@ const Footer = props => {
             <div className="footer"><h3>My Lambda Team</h3>
                 {/*<div className="home-button" onClick={() => history.push("/")}>Home</div>*/}
                 <Link to="/">
-                    <div className="home-button">Home</div>
+                    <div className="header-button">Home</div>
                 </Link>
             </div>
         </div>

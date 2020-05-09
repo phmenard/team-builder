@@ -1,16 +1,16 @@
 import React from 'react';
 //import { useHistory } from "react-router-dom";
 //import { Link } from 'react-router-dom'
-import './body.css';
+import './teamContainer.css';
 
-import TeamCard from './teamCard/TeamCard';
+import TeamCard from '../teamCard/TeamCard';
 
 
-const Body = props => {
+const TeamContainer = props => {
     //const history = useHistory();
     return (
 
-        <div className="body" >
+        <div className="myBody" >
             <div className="team-container">
                 {props.team.map(member => (
                     <TeamCard key={member.id} member={member} />
@@ -22,4 +22,4 @@ const Body = props => {
     );
 }
 
-export default Body;
+export default TeamContainer;

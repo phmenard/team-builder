@@ -7,4 +7,23 @@
     border: solid blue;
     padding: 1%;
     margin: 1%;
+   
+}
+
+img {
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+h2 {
+    line-height: 1%;
+}
+
+p {
+    line-height: normal;
+}
+
+label {
+    font-weight: bold;
 }

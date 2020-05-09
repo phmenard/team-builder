@@ -9,8 +9,11 @@ const Body = props => {
   return (
     
       <div className="teamCard" >
-             <h2>{props.member.name}</h2>
-             <p>{props.member.location}</p>   
+             <img src={props.member.image} />   
+             <label htmlFor="name">{props.member.name}</label>
+             <p>{props.member.location}</p>
+             <label htmlFor="role">{props.member.role}</label>
+             <p>{props.member.quote}</p>    
        </div>
     
   );

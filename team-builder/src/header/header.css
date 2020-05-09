@@ -2,7 +2,25 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /**position: fixed;*/
+    /*position: fixed; 
+    top: 0; */
     width: 100%;
     background-color: white;
+   
+    
 }
+
+.header-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(173, 184, 247);
+    padding: 5px;
+ 
+}
+a {
+    color: unset;
+    text-decoration: unset;
+  }
+
