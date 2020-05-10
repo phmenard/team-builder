@@ -10,6 +10,10 @@
     
 }
 
+h3 {
+    text-shadow: 1px 1px grey; 
+}
+
 .header-button {
     display: flex;
     justify-content: space-evenly;
@@ -18,7 +22,7 @@
     background-color: rgb(78, 78, 82);
     padding: 5px;
     color: white;
- 
+    box-shadow: 2px 2px grey;
 }
 a {
     color: unset;

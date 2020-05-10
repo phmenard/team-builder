@@ -43,7 +43,7 @@ const AddMemberForm = (props) => {
     const handleSubmit = (event) => {
         // validate the form 
         const isFormValid = validateForm(formErrors, setForErrors, formData);
-        
+
         event.preventDefault();
         if (isFormValid) {
             setSaved({ status: true, name: formData.name });
@@ -71,6 +71,7 @@ const AddMemberForm = (props) => {
     return (
         <div className="myBody">
             <div className="form-container"><form onSubmit={handleSubmit}>
+                <img src={formData.image} />   
                 <label htmlFor="image">Image:</label>
                 <input
                     id="image"
