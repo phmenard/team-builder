@@ -15,9 +15,11 @@ function App() {
 
   const handleSubmit = (memberSubmitted, editState) => {
     console.log(editState);
+    // check to seee if we are in editeState
     if(!editState){
       setTeam([...team, memberSubmitted]);
     }else{
+      // if edit state update the current object
       team.map((member, index)=>{
         if(member.id == memberSubmitted.id){
           Team[index] = Object.assign({}, memberSubmitted);

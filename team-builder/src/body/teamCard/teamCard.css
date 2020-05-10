@@ -19,6 +19,12 @@ img {
     height: 75px;
 }
 
+.badge {
+    border-radius: 0px;
+    width: 12px;
+    height: 12px;    
+}
+
 h2 {
     
 }

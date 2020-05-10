@@ -22,7 +22,8 @@ const AddMemberForm = (props) => {
 
     const [formData, setFormData] = useState(member ? member : {
         id: props.newId,
-        image: '',
+        image: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thwaitesfirm.com%2Fwp-content%2Fuploads%2F2019%2F01%2Fdefault-user-icon.jpg&f=1&nofb=1',
+        badge: '',
         name: '',
         role: '',
         location: '',
@@ -32,7 +33,8 @@ const AddMemberForm = (props) => {
     const clearForm = () => {
         setFormData({
             id: props.newId + 1,
-            image: '',
+            image: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thwaitesfirm.com%2Fwp-content%2Fuploads%2F2019%2F01%2Fdefault-user-icon.jpg&f=1&nofb=1',
+            badge: '',
             name: '',
             role: '',
             location: '',
@@ -58,6 +60,7 @@ const AddMemberForm = (props) => {
         setFormData({
             ...formData,
             [event.target.image]: event.target.value,
+            [event.target.badge]: event.target.value,
             [event.target.name]: event.target.value,
             [event.target.role]: event.target.value,
             [event.target.location]: event.target.value,
@@ -78,7 +81,17 @@ const AddMemberForm = (props) => {
                     name="image"
                     type="text"
                     placeholder="Image URL"
-                    value={formData.image}
+                    value={member ? formData.image : ''}
+                    onChange={handleChange}
+                />
+                <img className="badge" src={formData.badge} />
+                <label htmlFor="image">Badge:</label>
+                <input
+                    id="badge"
+                    name="badge"
+                    type="text"
+                    placeholder="Badge URL"
+                    value={member ? formData.badge : ''}
                     onChange={handleChange}
                 />
                 <label htmlFor="name">Name:</label>
