@@ -13,10 +13,10 @@ const Body = props => {
     
       <div className="teamCard" >
              <img src={props.member.image} />   
-             <Link to={`/add/${props.member.id}`}><p>{props.member.name}</p></Link>
-             <p>{props.member.location}</p>
-             <label htmlFor="role">{props.member.role}</label>
-             <p>{props.member.quote}</p>  
+             <Link to={`/add/${props.member.id}`}><p className="name">{props.member.name}</p></Link>
+             <label className="lable">Location:</label><p className="location">{props.member.location}</p>
+             <label className="lable">Role:</label><p className="role">{props.member.role}</p>
+             <label className="lable">Quote:</label><p className="quote">"{props.member.quote}"</p>  
                 
        </div>
     

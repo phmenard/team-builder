@@ -8,6 +8,8 @@
     background-color: rgb(204, 193, 193);
     padding: 1%;
     margin: 1%;
+
+    line-height: 1px;
    
 }
 
@@ -18,13 +20,38 @@ img {
 }
 
 h2 {
-    line-height: 1%;
+    
 }
 
 p {
+    /*line-height: normal;*/
+}
+
+p.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+p.location {
+    margin-bottom: 10%;
+}
+
+p.quote {
+    font-style: italic;
     line-height: normal;
+}
+
+p.role {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12%;
 }
 
 label {
     font-weight: bold;
+}
+
+.lable {
+    font-size: 12px;
 }
