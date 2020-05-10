@@ -3,6 +3,9 @@ import React from 'react';
 //import { Link } from 'react-router-dom'
 import './teamCard.css';
 
+import { Route, Link } from 'react-router-dom';
+import AddMemberForm from '../../forms/AddMember';
+
 
 const Body = props => {
   //const history = useHistory();
@@ -10,11 +13,11 @@ const Body = props => {
     
       <div className="teamCard" >
              <img src={props.member.image} />   
-             <label htmlFor="name">{props.member.name}</label>
+             <Link to={`/add/${props.member.id}`}><p>{props.member.name}</p></Link>
              <p>{props.member.location}</p>
              <label htmlFor="role">{props.member.role}</label>
              <p>{props.member.quote}</p>  
-             <p>Edit</p>   
+                
        </div>
     
   );

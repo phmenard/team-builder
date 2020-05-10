@@ -7,6 +7,7 @@
     padding: 1%;
     /*border-top-style: dotted;*/
     padding: 1%;
+    border-top-style: solid;
     
     
 }
@@ -33,6 +34,13 @@ form {
 
 .saved {
     color: green;
+    font-weight: bold;
+}
+
+.form-error {
+    display: flex;
+    flex-direction: column;
+    color: red;
     font-weight: bold;
 }
 

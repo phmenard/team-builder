@@ -6,8 +6,10 @@ import './teamContainer.css';
 import TeamCard from '../teamCard/TeamCard';
 
 
+
 const TeamContainer = props => {
     //const history = useHistory();
+    console.log(props.team);
     return (
 
         <div className="myBody" >

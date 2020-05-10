@@ -11,10 +11,23 @@ import Team from './data/team';
 import {addTeamMember} from './data/team';
 
 function App() {
-  const [team, setTeam] = useState(Team.reverse());
+  const [team, setTeam] = useState(Team);
 
-  const handleSubmit = (member) => {
-    setTeam([...team, member]);
+  const handleSubmit = (memberSubmitted, editState) => {
+    console.log(editState);
+    if(!editState){
+      setTeam([...team, memberSubmitted]);
+    }else{
+      team.map((member, index)=>{
+        if(member.id == memberSubmitted.id){
+          Team[index] = Object.assign({}, memberSubmitted);
+          console.log(member);
+          setTeam(Team);
+          return;
+        }
+      });
+      
+    }
   };
 
   return (
@@ -22,13 +35,15 @@ function App() {
       <Header />
         
         <Route exact path='/'>
-          <TeamContainer className="myBody" team={team} />
+          <TeamContainer className="myBody" team={team} handleSubmit={handleSubmit}/>
         </Route>
         <Route exact path='/add'>
-          <AddMemberForm handleSubmit={handleSubmit}/>
+          <AddMemberForm handleSubmit={handleSubmit} newId={team.length}/>
         </Route>
-        
-      
+        <Route exact path='/add/:id'>
+          <AddMemberForm handleSubmit={handleSubmit} team={team}/>
+        </Route>
+           
       <Footer />
     </div>
   );
