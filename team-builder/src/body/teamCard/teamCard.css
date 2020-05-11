@@ -25,6 +25,12 @@ img {
     height: 12px;    
 }
 
+.email {
+    line-height: 1px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
 h2 {
     
 }
@@ -52,6 +58,14 @@ p.location {
 p.quote {
     font-style: italic;
     line-height: normal;
+}
+
+.quote-container {
+    display: flex;
+    height: 100px;
+    width: 90%;
+    margin-bottom: 3%;
+
 }
 
 p.role {

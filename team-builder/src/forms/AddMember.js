@@ -9,8 +9,12 @@ const AddMemberForm = (props) => {
     const [editState, setEditState] = useState(false);
     const [formErrors, setFormErrors] = useState([]);
 
+    
+
     const params = useParams();
     //console.log(params);
+
+    
 
     let member = null;
     if (props.team) { // if the team is passed we are editing the member
@@ -28,6 +32,7 @@ const AddMemberForm = (props) => {
         role: '',
         location: '',
         quote: '',
+        email: '',
     });
 
     const clearForm = () => {
@@ -39,6 +44,7 @@ const AddMemberForm = (props) => {
             role: '',
             location: '',
             quote: '',
+            email: '',
         });
     };
 
@@ -67,6 +73,7 @@ const AddMemberForm = (props) => {
             [event.target.role]: event.target.value,
             [event.target.location]: event.target.value,
             [event.target.quote]: event.target.value,
+            [event.target.email]: event.target.value,
         });
 
         setSaved({ status: false, name: formData.name });
@@ -132,6 +139,16 @@ const AddMemberForm = (props) => {
                     value={formData.quote}
                     onChange={handleChange}
                 />
+                <label htmlFor="Email">Email:</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="Member email"
+                    value={formData.email}
+                    onChange={handleChange}
+                />
+
                 <button type="submit">Save!</button>
 
             </form>
@@ -139,9 +156,14 @@ const AddMemberForm = (props) => {
                 {formErrors ?  <p className="form-error">{formErrors}</p> : ''}                
                 {saved.status ? <p className="saved">{saved.name} has been {member ? 'updated.' : 'saved.'}</p> : ''}
             </div>
+            
         </div>
+
+
+
     );
 }
+    
 
 function validateForm(formErrors, setFormErrors, formData) {
     let validForm = true;
@@ -186,6 +208,12 @@ function validateForm(formErrors, setFormErrors, formData) {
     // check for bad quote
     if(formData.quote === 'fuck you'){
         err.push(' The quote is not valid.');
+        validForm = false;
+    }
+
+    if(formData.quote.length > 100){
+        console.log(formData.quote.length);
+        err.push(' The quote is long.');
         validForm = false;
     }
 

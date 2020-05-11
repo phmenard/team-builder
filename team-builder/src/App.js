@@ -12,6 +12,9 @@ import {addTeamMember} from './data/team';
 
 function App() {
   const [team, setTeam] = useState(Team);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  console.log(currentPath);
 
   const handleSubmit = (memberSubmitted, editState) => {
     console.log(editState);
@@ -31,24 +34,28 @@ function App() {
       
     }
   };
-
+  
   return (
     <div className="App">
-      <Header />
+      <Header currentPath={currentPath} />
         
         <Route exact path='/'>
+          
           <TeamContainer className="myBody" team={team} handleSubmit={handleSubmit}/>
         </Route>
         <Route exact path='/add'>
-          <AddMemberForm handleSubmit={handleSubmit} newId={team.length}/>
+          <AddMemberForm handleSubmit={handleSubmit} newId={team.length} setCurrentPath={setCurrentPath}/>
         </Route>
         <Route exact path='/add/:id'>
+          
           <AddMemberForm handleSubmit={handleSubmit} team={team}/>
         </Route>
            
       <Footer />
     </div>
   );
+
+  
 }
 
 export default App;

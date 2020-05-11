@@ -7,6 +7,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Boston, Ma.',
         quote: 'Life is like a tree, it branches off into many directions. But only one branch leads to the top.',
+        email: 'paul-menard@lambdastudents.com'
     },
     {
         id: 1,
@@ -16,6 +17,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Somewhere',
         quote: 'Stay strong',
+        email: ''
     },
     {
         id: 2,
@@ -25,6 +27,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Maine',
         quote: 'yep !!',
+        email: ''
     },
     {
         id: 3,
@@ -34,6 +37,7 @@ export const team = [
         role: 'TL / Web Developer',
         location: 'Chicago',
         quote: 'sure !!',
+        email: ''
     },
     {
         id: 4,
@@ -43,6 +47,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Not Sure',
         quote: 'ok !!',
+        email: ''
     },
     {
         id: 5,
@@ -52,6 +57,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Earth',
         quote: 'You can do it !!',
+        email: ''
     },
     {
         id: 6,
@@ -61,6 +67,7 @@ export const team = [
         role: 'TL / Web Developer',
         location: 'Midwest',
         quote: 'have a great day!',
+        email: ''
     },
     {
         id: 7,
@@ -70,6 +77,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Not sure',
         quote: 'This is fun!',
+        email: ''
     }
     
     
