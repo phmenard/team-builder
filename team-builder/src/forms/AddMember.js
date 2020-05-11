@@ -7,7 +7,7 @@ import './forms.css';
 const AddMemberForm = (props) => {
     const [saved, setSaved] = useState({ status: false, name: "" });
     const [editState, setEditState] = useState(false);
-    const [formErrors, setForErrors] = useState([]);
+    const [formErrors, setFormErrors] = useState([]);
 
     const params = useParams();
     //console.log(params);
@@ -44,7 +44,7 @@ const AddMemberForm = (props) => {
 
     const handleSubmit = (event) => {
         // validate the form 
-        const isFormValid = validateForm(formErrors, setForErrors, formData);
+        const isFormValid = validateForm(formErrors, setFormErrors, formData);
 
         event.preventDefault();
         if (isFormValid) {
@@ -68,7 +68,7 @@ const AddMemberForm = (props) => {
         });
 
         setSaved({ status: false, name: formData.name });
-        setForErrors([]);
+        setFormErrors([]);
     };
 
     return (
@@ -144,18 +144,38 @@ function validateForm(formErrors, setFormErrors, formData) {
     let validForm = true;
     let err = [];
     
-    if(formData.name === '' || !isNaN(formData.name)){
-        err.push(' The name is not valid.');
+    console.log(formData.name.search(/[0-9]/));
+    if(formData.name === '' || formData.name.search(/[0-9]/) != -1){
+        err.push(' The name is invalid.');
         validForm = false;
     }
+
+    if(formData.name.search(/http/i) != -1){
+        err.push(' The name cannot contain a link.');
+        validForm = false;
+    }
+
     if(formData.role === ''){
         err.push(' The role is not valid.');
         validForm = false;
     }
+
+    if(formData.role.search(/http/i) != -1){
+        err.push(' The role cannot contain a link.');
+        validForm = false;
+    }
+
+
     if(formData.location === ''){
         err.push(' The location is not valid.');
         validForm = false;
     }
+
+    if(formData.location.search(/http/i) != -1){
+        err.push(' The location cannot contain a link.');
+        validForm = false;
+    }
+
     if(formData.quote === 'fuck you'){
         err.push(' The quote is not valid.');
         validForm = false;

@@ -52,6 +52,15 @@ export const team = [
         role: 'Web Developer',
         location: 'Earth',
         quote: 'You can do it !!',
+    },
+    {
+        id: 6,
+        badge: 'https://emoji.slack-edge.com/TSZCHB482/lambdapm-new/4a9f0e6de80a7e31.png',
+        image: 'https://ca.slack-edge.com/T4JUEB3ME-W012JQ02P6X-c84e5d7ba714-72',
+        name: 'Austin Kelsay',
+        role: 'TL / Web Developer',
+        location: 'Midwest',
+        quote: 'have a great day!',
     }
     
     
