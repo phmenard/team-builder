@@ -13,7 +13,7 @@ const Body = props => {
     
       <div className="teamCard" >
              <img src={props.member.image} />   
-             <Link to={`/add/${props.member.id}`}>{props.member.badge == '' ?  <p className="name">{props.member.name}</p> : <p className="name">{props.member.name}<img className="badge" src={props.member.badge}/></p>}</Link>
+             <Link to={`/add/${props.member.id}`}>{props.member.badge == '' ?  <p className="name">{props.member.name}</p> : <p className="name">{props.member.name} <img className="badge" src={props.member.badge}/></p>}</Link>
              <label className="lable">Location:</label><p className="location">{props.member.location}</p>
              <label className="lable">Role:</label><p className="role">{props.member.role}</p>
              <label className="lable">Quote:</label><p className="quote">"{props.member.quote}"</p>  

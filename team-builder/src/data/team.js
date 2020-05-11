@@ -61,6 +61,15 @@ export const team = [
         role: 'TL / Web Developer',
         location: 'Midwest',
         quote: 'have a great day!',
+    },
+    {
+        id: 7,
+        badge: '',
+        image: 'https://ca.slack-edge.com/T4JUEB3ME-W012QNUS0Q4-d6ec86431c25-72',
+        name: 'Dipesh Koirala',
+        role: 'Web Developer',
+        location: 'Not sure',
+        quote: 'This is fun!',
     }
     
     

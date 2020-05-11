@@ -51,7 +51,9 @@ const AddMemberForm = (props) => {
             setSaved({ status: true, name: formData.name });
             
             props.handleSubmit(formData, params.id ? true : false);
-            clearForm();
+            if(!member){
+                clearForm();
+            }
         }
 
     };
@@ -133,8 +135,9 @@ const AddMemberForm = (props) => {
                 <button type="submit">Save!</button>
 
             </form>
+                
                 {formErrors ?  <p className="form-error">{formErrors}</p> : ''}                
-                {saved.status ? <p className="saved">{saved.name} has been saved.</p> : ''}
+                {saved.status ? <p className="saved">{saved.name} has been {member ? 'updated.' : 'saved.'}</p> : ''}
             </div>
         </div>
     );
@@ -144,38 +147,43 @@ function validateForm(formErrors, setFormErrors, formData) {
     let validForm = true;
     let err = [];
     
-    console.log(formData.name.search(/[0-9]/));
+    // check for blank name or name containing numbers
     if(formData.name === '' || formData.name.search(/[0-9]/) != -1){
         err.push(' The name is invalid.');
         validForm = false;
     }
 
+    // don't allow links in name
     if(formData.name.search(/http/i) != -1){
         err.push(' The name cannot contain a link.');
         validForm = false;
     }
 
+    //check for blank role
     if(formData.role === ''){
         err.push(' The role is not valid.');
         validForm = false;
     }
 
+    // don't allow links in role
     if(formData.role.search(/http/i) != -1){
         err.push(' The role cannot contain a link.');
         validForm = false;
     }
 
-
+    // check for blank location
     if(formData.location === ''){
         err.push(' The location is not valid.');
         validForm = false;
     }
 
+    // don't allow links in location
     if(formData.location.search(/http/i) != -1){
         err.push(' The location cannot contain a link.');
         validForm = false;
     }
 
+    // check for bad quote
     if(formData.quote === 'fuck you'){
         err.push(' The quote is not valid.');
         validForm = false;
