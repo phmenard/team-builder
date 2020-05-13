@@ -3,7 +3,7 @@ export const team = [
         id : 0,
         badge: '',
         image: 'https://ca.slack-edge.com/T4JUEB3ME-W0123RSAN15-4ec1c165aab7-72',
-        name: 'Paul H. Menard',
+        name: 'Paul Menard',
         role: 'Web Developer',
         location: 'Boston, Ma.',
         quote: 'Life is like a tree, it branches off into many directions. But only one branch leads to the top.',
@@ -17,7 +17,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Somewhere',
         quote: 'Stay strong',
-        email: ''
+        email: 'ben-venker@lambdastudents.com'
     },
     {
         id: 2,
@@ -47,7 +47,7 @@ export const team = [
         role: 'Web Developer',
         location: 'Not Sure',
         quote: 'ok !!',
-        email: ''
+        email: 'charlene-johnson@lambdastudents.com'
     },
     {
         id: 5,
@@ -67,16 +67,6 @@ export const team = [
         role: 'TL / Web Developer',
         location: 'Midwest',
         quote: 'have a great day!',
-        email: ''
-    },
-    {
-        id: 7,
-        badge: '',
-        image: 'https://ca.slack-edge.com/T4JUEB3ME-W012QNUS0Q4-d6ec86431c25-72',
-        name: 'Dipesh Koirala',
-        role: 'Web Developer',
-        location: 'Not sure',
-        quote: 'This is fun!',
         email: ''
     }
     

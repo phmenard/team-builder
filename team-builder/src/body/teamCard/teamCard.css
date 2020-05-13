@@ -27,7 +27,7 @@ img {
 
 .email {
     line-height: 1px;
-    font-size: 12px;
+    font-size: 10px;
     margin-right: 5px;
 }
 
@@ -64,7 +64,7 @@ p.quote {
     display: flex;
     height: 100px;
     width: 90%;
-    margin-bottom: 3%;
+    
 
 }
 

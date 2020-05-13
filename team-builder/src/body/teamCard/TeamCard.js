@@ -3,8 +3,8 @@ import React from 'react';
 //import { Link } from 'react-router-dom'
 import './teamCard.css';
 
-import { Route, Link } from 'react-router-dom';
-import AddMemberForm from '../../forms/AddMember';
+import { Link } from 'react-router-dom';
+//import AddMemberForm from '../../forms/AddMember';
 
 
 const Body = props => {
