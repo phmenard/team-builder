@@ -1,0 +1,20 @@
+.team-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60%;
+    
+    
+    
+    padding: 1%;
+    
+}
+
+.myBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  

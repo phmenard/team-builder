@@ -1,0 +1,55 @@
+.form-container {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+    width: 60%;
+    padding: 1%;
+    /*border-top-style: dotted;*/
+    
+    
+    
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(204, 193, 193);
+    border: 1px solid  rgb(78, 78, 82);
+    
+    box-shadow: 2px 2px grey;
+}
+
+.myBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+.saved {
+    color: green;
+    font-weight: bold;
+}
+
+.form-error {
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 3%;
+}
+
+textarea {
+    margin-bottom: 3%;
+}
+

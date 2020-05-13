@@ -1,0 +1,83 @@
+.teamCard {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid  rgb(78, 78, 82);
+    background-color: rgb(204, 193, 193);
+    padding: 1%;
+    margin: 1%;
+
+    line-height: 1px;
+    box-shadow: 2px 2px grey;
+}
+
+img {
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+.badge {
+    border-radius: 0px;
+    width: 12px;
+    height: 12px;    
+}
+
+.email {
+    line-height: 1px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+h2 {
+    
+}
+
+p {
+    /*line-height: normal;*/
+}
+
+p.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10%;
+    text-shadow: 1px 1px grey;
+    
+}
+
+p.name:hover {
+    color: rgb(233, 235, 236);
+}
+
+p.location {
+    margin-bottom: 10%;
+}
+
+p.quote {
+    font-style: italic;
+    line-height: normal;
+}
+
+.quote-container {
+    display: flex;
+    height: 100px;
+    width: 90%;
+    margin-bottom: 3%;
+
+}
+
+p.role {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.lable {
+    font-size: 12px;
+}
